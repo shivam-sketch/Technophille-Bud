@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Survey Form using HTML and CSS
+	</title>
+
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color:rgb(27, 87, 218);
+			font-family: Verdana;
+			text-align: center;
+		}
+        body:hover{
+            background:teal ;
+        }
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #996548;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 10px 8px 10px rgba(214, 10, 10, 0.5);
+            border-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-right-width: 80 ;
+            border-block-start-color: rgb(151, 48, 48);
+            /* width: 800px; */
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+            border-radius: 90px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 4px solid rgb(3, 3, 3);
+			border-radius: 10px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 90%;
+            
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			display: inline-block;
+  			padding: 15px 25px;
+			font-size: 15px;
+  			cursor: pointer;
+			text-align: center;
+  			text-decoration: none;
+  			outline: none;
+  			color: rgb(0, 0, 0);
+  			background-color: #ff0b0b;
+  			border: none;
+  			border-radius: 15px;
+
+		}
+        button:hover{
+            background: tan;
+        }
+	</style>
+</head>
+
+<body>
+	<h1>Tech Cruise COLLEGE Survey Form</h1>
+
+	<!-- Create Form -->
+	<form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="Name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="Enter your name" required />
+		</div>
+
+		<div class="form-control">
+			<label for="Email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="email"
+				placeholder="Enter your email" required />
+		</div>
+
+		<div class="form-control">
+			<label for="Age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age"
+				placeholder="Enter your age" required />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which option best describes you?
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+				<option value="Select" selected>Select</option>
+				<option value="student">Student</option>
+				<option value="intern">Intern</option>
+				<option value="professional">
+					Professional
+				</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommed Tech Cruise
+				to a friend?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>Languages and Frameworks known
+				<small>(Check all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">C</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">C++</input></label>
+			            
+                    
+			<label for="inp-4"></label>
+				<input type="checkbox"
+					name="inp">Java</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Python</input></label>
+			<label for="inp-6">
+				<input type="checkbox"
+					name="inp">JavaScript</input></label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">React</input></label>
+			<label for="inp-8">
+				<input type="checkbox"
+					name="inp">Django</input></label>
+                    <label for="inp-9">
+                        <input type="checkbox"
+                            name="inp">Vue.js</input></label>
+                            <label for="inp-10">
+                                <input type="checkbox"
+                                    name="inp">Svelte</input></label>
+                            
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment"
+				placeholder="Feel free to share with us">
+			</textarea>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+</body>
+
+</html>
